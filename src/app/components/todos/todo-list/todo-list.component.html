@@ -1,0 +1,7 @@
+<div class="div-list todo">
+  <ul class="list">
+    <div *ngFor="let todo of todos">
+      <p class="title" [ngClass]="{'completed' : todo.completed}">Title: {{todo.title}}</p>
+    </div>
+  </ul>
+</div>

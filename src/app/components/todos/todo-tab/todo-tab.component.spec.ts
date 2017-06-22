@@ -4,6 +4,7 @@ import { TodoTabComponent } from './todo-tab.component';
 import {MockTodoListComponent} from '../todo-list/todo-list.component.mock';
 import {ActivatedRoute} from '@angular/router';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
 
 describe('TodoTabComponent', () => {
   let component: TodoTabComponent;

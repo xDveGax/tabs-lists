@@ -4,6 +4,7 @@ import { UserTabComponent } from './user-tab.component';
 import {MockUserListComponent} from '../user-list/user-list.component.mock';
 import {ActivatedRoute} from '@angular/router';
 import {Observable} from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
 
 describe('UserTabComponent', () => {
   let component: UserTabComponent;

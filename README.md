@@ -28,3 +28,6 @@ npm run lint
 * Add more examples
 
 If you have any suggestions, make a issue ;) 
+
+## Matchers jasmine
+https://jasmine.github.io/edge/introduction.html#section-Expectations

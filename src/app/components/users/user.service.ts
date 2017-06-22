@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from '@angular/http';
+import {Http, RequestOptions, Response, Headers} from '@angular/http';
 import { User } from './user.model';
 import { Observable } from 'rxjs/Observable';
 import { API_URL } from '../../config/config';
@@ -13,7 +13,11 @@ export class UserService {
   }
 
   getList(): Observable<User[]> {
-    return this.http.get(API_URL + '/users')
+    const headers: Headers = new Headers();
+    headers.append('X-API-TOKEN', 'kubide');
+    const opts: RequestOptions = new RequestOptions();
+    opts.headers = headers;
+    return this.http.get(API_URL + '/users', opts)
       .map(this.extractData)
       .catch(this.handleError);
   }
